@@ -1,1 +1,0 @@
-# muhammadashshiddiqi.github.io
