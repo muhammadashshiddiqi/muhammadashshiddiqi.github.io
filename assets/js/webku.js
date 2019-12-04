@@ -4,10 +4,57 @@
 
   $(window).on('load', function() {
 
+    /* --------- Teknical Skill -----------*/
+    function boxSkill(){
+      var scroll = $(window).scrollTop();
+      var pos = $(".box-skill").offset().top;
 
-  /* 
-   One Page Navigation & wow js
-   ========================================================================== */
+      if(pos < scroll + 350)
+      {
+          //Easy Pie Chart
+          $('.chart').easyPieChart({
+              lineWidth : 15,
+              size : 152,
+              barColor : '#FF675F',
+              scaleColor : false,
+              trackColor : '#E1E1E3',
+              onStep: function(from, to, percent)
+              {
+                $(this.el).find('.percent').text(Math.round(percent));
+              }
+          });
+      }
+    }
+
+    /*-----------Slide Animasi---------- */
+    function slideAnim(){
+      $(".slideanim").each(function()
+      {
+          var elem = $(this);
+          var arah = (elem.is("[data-slideanim]")) ? elem.data("slideanim") : "default";
+          //var arah = (elem[0].hasAttribute("data-slideanim")) ? elem.data("slideanim") : "default";
+          var pos = $(this).offset().top;
+          var scroll = $(window).scrollTop();
+
+          if (pos < scroll + 550)
+          {
+              if(arah == "default")
+              {
+                  $(this).addClass("slide-aktif");
+              }
+              else if(arah == "kiri")
+              {
+                  $(this).addClass("slide-kiri-aktif");
+              }
+              else
+              {
+                  $(this).addClass("slide-kanan-aktif");
+              }
+          }
+      });
+    }
+    
+    /*---One Page Navigation & wow js----*/
     var OnePNav = $('.onepage-nev');
     var top_offset = OnePNav.height() - -0;
     OnePNav.onePageNav({
@@ -32,6 +79,8 @@
         } else {
           $('.back-to-top').fadeOut(400);
         }
+        slideAnim();
+        boxSkill();
       });
 
       $('.back-to-top').on('click',function(event) {
@@ -41,28 +90,6 @@
         }, 600);
         return false;
       });
-
-    /* --------- Teknical Skill -----------*/
-    $(window).scroll(function() {
-      var scroll = $(window).scrollTop();
-      var pos = $(".box-skill").offset().top;
-
-      if(pos < scroll + 350)
-      {
-          //Easy Pie Chart
-          $('.chart').easyPieChart({
-              lineWidth : 15,
-              size : 152,
-              barColor : '#FF675F',
-              scaleColor : false,
-              trackColor : '#E1E1E3',
-              onStep: function(from, to, percent)
-              {
-                $(this.el).find('.percent').text(Math.round(percent));
-              }
-          });
-      }
-    });
   });      
 
 }(jQuery));
