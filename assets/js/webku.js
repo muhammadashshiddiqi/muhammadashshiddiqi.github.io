@@ -15,7 +15,7 @@
           $('.chart').easyPieChart({
               lineWidth : 15,
               size : 152,
-              barColor : '#FF675F',
+              barColor : '#00b4d9',
               scaleColor : false,
               trackColor : '#E1E1E3',
               onStep: function(from, to, percent)
