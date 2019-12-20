@@ -178,24 +178,33 @@ button:focus {
 .social-icon li {
   display: inline-block;
 }
-..social-icon li a span.icon{
-  position:absolute;
-  top:-40%;
-  padding: 100px;
-}
-
 .social-icon li a {
   color: #000;
+  padding: 10px;
+  margin: 0 5px;
   background: #fff;
-  width: 50px;
-  height: 50px;
-  /* line-height: 38px; */
   display: block;
   text-align: center;
-  position: relative;
   border-radius: 100%;
   font-size: 16px;
-  margin: 15px 6px 12px 6px;
+  transition: all 0.3s ease-in-out 0s;
+  -moz-transition: all 0.3s ease-in-out 0s;
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  -o-transition: all 0.3s ease-in-out 0s;
+}
+
+.contact-icon li {
+  display: inline-block;
+}
+.contact-icon li a {
+  color: #000;
+  padding: 10px;
+  margin: 0 5px;
+  background: #f2f2f2;
+  display: block;
+  text-align: center;
+  border-radius: 100%;
+  font-size: 16px;
   transition: all 0.3s ease-in-out 0s;
   -moz-transition: all 0.3s ease-in-out 0s;
   -webkit-transition: all 0.3s ease-in-out 0s;
@@ -204,32 +213,32 @@ button:focus {
 
 
 
-.social-icon li a:hover {
+.contact-icon li a:hover, .social-icon li a:hover {
   color: #fff;
   /* padding: 4px; */
 }
 
-.social-icon li .facebook:hover {
+.contact-icon li .facebook:hover, .social-icon li .facebook:hover {
   background: #3b5999;
 }
 
-.social-icon li .twitter:hover {
+.contact-icon li .twitter:hover, .social-icon li .twitter:hover {
   background: #4A9CEC;
 }
 
-.social-icon li .instagram:hover {
+.contact-icon li .instagram:hover, .social-icon li .instagram:hover {
   background: #D6274D;
 }
 
-.social-icon li .whatsapp:hover {
+.contact-icon li .whatsapp:hover, .social-icon li .whatsapp:hover {
   background: #228B22;
 }
 
-.social-icon li .linkedin:hover {
+.contact-icon li .linkedin:hover, .social-icon li .linkedin:hover {
   background: #1260A2;
 }
 
-.social-icon li .google:hover {
+.contact-icon li .google:hover, .social-icon li .google:hover {
   background: #CE332A;
 }
 
