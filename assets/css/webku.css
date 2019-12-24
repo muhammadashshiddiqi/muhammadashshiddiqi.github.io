@@ -509,20 +509,20 @@ a.back-to-top:hover, a.back-to-top:focus {
   overflow: hidden;
   padding: 10px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+  margin-bottom: 7%;
 }
 
 .services-item .services-content img{
   display: block;
   width: 100%;
   height: 100%;
-
+  text-align: center;
 }
 
 .services-item .services-content .services-imgHover{
   position: absolute;
   top: 0;
-  width: 100%;/* 
-  margin: 3% 0 0 0; */
+  width: 100%;
   height: 100%;
 }
 
@@ -533,8 +533,8 @@ a.back-to-top:hover, a.back-to-top:focus {
   margin-top: 20%;
   -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
   transition: transform 0.3s, opacity 0.3s;
-  -webkit-transform: translate3d(0, -400%, 0);
-  transform: translate3d(0, -400%, 0);
+  -webkit-transform: translate3d(0, -600%, 0);
+  transform: translate3d(0, -600%, 0);
 }
 
 .services-item .services-content .services-imgHover span {
@@ -544,8 +544,8 @@ a.back-to-top:hover, a.back-to-top:focus {
   font-size: 14px;
   -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
   transition: transform 0.3s, opacity 0.3s;
-  -webkit-transform: translate3d(0, 400%, 0);
-  transform: translate3d(0, 400%, 0);
+  -webkit-transform: translate3d(0, 600%, 0);
+  transform: translate3d(0, 600%, 0);
 }
 
 .services-item:hover .services-content .services-imgHover {
